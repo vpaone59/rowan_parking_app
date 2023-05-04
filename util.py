@@ -17,12 +17,12 @@ nms_threshold = 0.25
 
 # Setting up yolo model instead
 # Load names of classes and get random colors
-classes = open('../yolo_test/coco.names').read().strip().split('\n')
+classes = open('./models/coco.names').read().strip().split('\n')
 np.random.seed(42)
 colors = np.random.randint(0, 255, size=(len(classes), 3), dtype='uint8')
 
 # Give the configuration and weight files for the model and load the network.
-net = cv2.dnn.readNetFromDarknet('../yolo_test/yolov3.cfg', '../yolo_test/yolov3.weights')
+net = cv2.dnn.readNetFromDarknet('./models/yolov3.cfg', './models/yolov3.weights')
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
 # determine the output layer
 ln = net.getLayerNames()

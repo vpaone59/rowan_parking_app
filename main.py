@@ -1,3 +1,9 @@
+"""
+PICTURES/IMAGES MUST BE RESIZED TO 1920x1080
+"""
+
+
+
 import cv2 
 import matplotlib.pyplot as plt 
 import numpy as np 
@@ -5,8 +11,8 @@ import numpy as np
 from util import get_parking_spots_bboxes, empty_or_not 
 
 # paths to images for mask and lot
-mask = './images/carpark_test_mask2.jpg'
-lot = './images/carpark_test.jpg'
+mask = './images/masks/eng12_mask.jpg'
+lot = './images/lot_images/eng12.jpg'
 # read in images in grayscale
 mask = cv2.imread(mask, 0)
 lot = cv2.imread(lot)
